@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "61014af5c71cdf35d0799997",
+        "matsal": "aaa",
+        "intsal": "aaa",
+        "adresse": "aaa",
+        "ntelephone": "1111",
+        "email": "aaaa@aaa.aa",
+        "Cin": "111111",
+        "__v": 0
+    },
+    {
+        "_id": "61014b4cc71cdf35d0799999",
+        "matsal": "1234",
+        "intsal": "asma",
+        "adresse": "BA",
+        "ntelephone": "12345678",
+        "email": "a@a.a",
+        "Cin": "12345678",
+        "__v": 0
+    },
+    {
+        "_id": "6101cacef064075c50eb6f7b",
+        "matsal": "aaaaaa",
+        "intsal": "",
+        "adresse": "",
+        "ntelephone": "",
+        "email": "",
+        "Cin": "",
+        "__v": 0
+    }
+]

@@ -1,0 +1,39 @@
+body {
+    font-family: 'Open Sans', sans-serif
+}
+
+.search {
+    top: 6px;
+    left: 10px
+}
+
+.form-control {
+    border: none;
+    padding-left: 32px
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: none
+}
+
+.green {
+    color: green
+}
+table{
+    border-collapse: collapse;
+  }
+  
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+  }
+#salar
+{
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-size: 30px;
+    color: #387ead;
+    
+}

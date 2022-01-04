@@ -1,0 +1,35 @@
+.card{
+    margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px; 
+}
+
+#montantr
+{
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    
+    
+}
+
+table {
+    border-width:0.5px; 
+    border-style:solid; 
+    border-color:black;
+   
+    }
+
+label
+{    margin-bottom: 2.5rem;
+    
+    text-align: center;
+    font-size: 22px;
+
+}
+
+input[type=text]
+ {
+    border: 2.1px solid rgb(3, 35, 82);
+    border-radius: 4px;
+  }

@@ -1,0 +1,67 @@
+<br><br>
+<div class="container">
+    <div class="row">
+    <div class="card" style="width: 60%"  >
+        <div class="card-body">
+            <h5 class="card-title" id="pret">Ajout prêt </h5>
+            <form [formGroup]="userForm">
+            <div class="form-group" >
+                <label for="numprêt">num prêt</label>
+                <input type="text" class="form-control" formControlName="numpret"  name="numpret" required >
+            </div>
+            <div class="form-group">
+                <label for="typepret">type prêt</label>
+                <select id="typepret" class="form-control" ngModel formControlName="typepret" name="typepret">
+                    <option > aid el fitr</option>
+                    <option>aid el idha</option>
+                    <option>mariage</option>
+                    <option>exeptionnel </option>
+                    <option>autre</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dated">date pret</label>
+                <input type="date" class="form-control"  ngModel formControlName="dated" name="dated" required>
+            </div>
+            <div class="form-group">
+                <label for="matsal">matricule Salarié</label>
+                <input type="number" class="form-control" ngModel formControlName="matsal" name="matsal" required >
+            </div>
+            <div class="form-group">
+            <label for="montantp">montant prêt</label>
+            <input type="number" class="form-control" ngModel formControlName="montantp" name="montantp" required >
+            </div>
+            <div class="form-group">
+                <label for="modepay">mode payement  </label>
+                <select id="modepay" class="form-control" ngModel formControlName="modepay" name="modepay">
+                    <option >Espèces</option>
+                    <option>Chèques</option>
+                    <option>Traite</option>
+                    <option>Retenue salaire</option>
+                    <option>autre</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nbrech">nombre d'échéllance</label>
+                <input type="number" class="form-control" ngModel formControlName="nbrech" name="nbrech" required >
+            </div>
+            <div class="form-group">
+                <label for="date">date 1er reglement </label>
+                <input type="date" class="form-control" ngModel formControlName="date" name="date" required >
+            </div>
+
+
+            <div class="form-group">
+                <input type="hidden" class="form-control"  formControlName="etat" name="etat" value="0" required  >
+            </div>
+
+
+            <div align="center">
+            <a ><button id="ajouter"   class="btn btn-primary"  (click)="insert()" >Ajouter</button></a>
+            </div>   
+        </form>
+        </div>
+            </div>
+    
+        </div>
+    </div>

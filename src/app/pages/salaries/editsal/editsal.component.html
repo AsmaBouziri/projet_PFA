@@ -1,0 +1,42 @@
+<br><br>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-2"></div>
+          <div class="col-lg-6 col-md-8 ">
+                <div class="col-lg-12 " id="salar"   >
+                  Modifier Salarié
+                </div>
+                <div class="col-lg-12 "class="edit-form" >
+                    <form   >
+                    <div class="form-group" >
+                        <label for="matsal">Matricule Salarié</label>
+                        <input  type="text"  class="form-control" name="matsal"  [(ngModel)]="employee.matsal"  required >
+                    </div>
+                    <div class="form-group">
+                        <label for="intsal">Intitulé Salarié</label>
+                        <input   type="text"  class="form-control" name="intsal"  [(ngModel)]="employee.intsal"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse">Adresse</label>
+                        <input   type="text"  class="form-control" name="adresse"   [(ngModel)]="employee.adresse" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ntelephone">N° Telephone</label>
+                        <input type="number"  class="form-control" name="ntelephone"  [(ngModel)]="employee.ntelephone"   required pattern="[0-9]{8}">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Adresse Email</label>
+                      <input  type="email"   class="form-control"  name="email"  [(ngModel)]="employee.email" aria-describedby="emailHelp"required >
+                    </div>
+                    <div class="form-group">
+                        <label for="Cin">CIN</label>
+                        <input   type="number"  class="form-control"name="Cin"   [(ngModel)]="employee.Cin" required pattern="[0-9]{8}">
+                    </div>
+                    <input type ="button" id="modifier"   class="btn btn-primary"  (click) = "updatesal()" value="modifier">
+                 
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-2"></div>
+          </div>
+      </div>

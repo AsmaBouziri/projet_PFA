@@ -1,0 +1,71 @@
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 60%"  >
+            <div class="card-body">
+                <h5 class="card-title" id="reg">Ajout Réglement </h5>
+                  <form  [formGroup]="userForm">
+
+                    <div class="form-group" >
+                        <label for="numech">N° Echeance</label>
+                        <input formControlName="numech"  type="text" class="form-control" required>
+                    </div> 
+
+
+                    <div class="form-group" >
+                        <label for="numpret">N° Pret</label>
+                        <input formControlName="numpret"  type="text" class="form-control" required>
+                    </div>
+
+                    
+                    <div class="form-group" >
+                        <label for="numrecu">N° Reçu</label>
+                        <input formControlName="numrecu"  type="text" class="form-control" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="daterecu">Date reçu </label>
+                        <input type="date"  class="form-control"  formControlName="daterecu" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="matsal">Matricule salarie</label>
+                        <input type="text" class="form-control"  formControlName="matsal"required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="intsal">Intitulé salarie</label>
+                        <input type="text" class="form-control"  formControlName="intsal" required >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="montant">Montant</label>
+                        <input type="number" class="form-control" formControlName="montant"  required >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="modep">Mode Paiment</label>
+                        <select id="modep" class="form-control" ngModel formControlName="modep" name="modep">
+                            <option >Espèces</option>
+                            <option>Chèques</option>
+                            <option>Traite</option>
+                            <option>Retenue salaire</option>
+                            <option>autre</option>
+                        </select>
+                    </div>
+
+
+                <div align="center">
+                  <a > <input type ="button" id="ajouter"   class="btn btn-primary" (click)="insert()"  value="Ajouter"></a>
+                </div>   
+                </form>
+                </div>
+            </div>
+            
+        </div>
+   

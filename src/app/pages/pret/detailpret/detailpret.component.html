@@ -1,0 +1,144 @@
+<br><br>
+    <div class="container">
+      <div class="card" style="width: 100%" >
+          <div class="card-body">
+              <div class="container">
+              <div class="row">
+                  <div class="col-4">
+                      <label for="numpret">N° pret  : </label>
+                      <input type="text" name="numpret"  [(ngModel)]="pret.numpret"  disabled required >
+                  </div>
+                  <div class="col-4">
+                      <label for="datep">Date pret  :  </label>
+                      <input type="text" name="date"  [(ngModel)]="pret.dated" disabled  required>
+                  </div>
+                  <div class="col-4">
+                      <label for="typepret">type pret :  </label>
+                      <input type="text" name="typepret"  [(ngModel)]="pret.typepret" disabled  required>
+                  </div>
+              </div>            
+            </div>
+              <br><br>
+              <div class="card" style="width: 100%">
+                  <div class="card-body">
+                      <BR>
+                        <!--
+                      <div class="row">
+                        <div class="col-2">
+                          <label for="libsal">libelle salarie </label>
+                        </div>
+                        <div class="col-10">
+                          <input type="text" required name="libsal"  [(ngModel)]="pret.libsal"disabled  >
+                        </div>
+                      </div>
+                      -->
+                      <div class="row">
+                        <div class="col-12">
+                            <label for="matsal">matricule salarie : </label>
+                            <input type="text" name="matsal" [(ngModel)]="pret.matsal" disabled  required style="width:80%">
+                        </div>
+                      </div>            
+                      
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="montant">Montant:</label>
+                              <input type="text" name="montantp"  [(ngModel)]="pret.montantp" disabled required>
+                          </div>
+    
+                          <div class="col-4">
+                              <label for="nbrech">Echellance sur:</label>
+                              <input type="text" name="nbrech"  [(ngModel)]="pret.nbrech" disabled required> mois
+                          </div>
+    
+                          <div class="col-4">
+                              <label for="dated">Date début:</label>
+                              <input type="text" name="dated"  [(ngModel)]="pret.date" disabled  required>
+                          </div>
+                      </div>
+                      <br><BR>
+                        <!--payer-->
+                      <div class="row">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th scope="col">N° reçu </th>
+                                <th scope="col">Date echéance</th>
+                                <th scope="col">Montant</th>
+                                <th scope="col">Mode Payement</th>
+                                <th scope="col">Etat</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr  *ngFor="let dtp of (detailspretspayer | async)">
+                                <td >{{dtp.numrecu}}</td>
+                                <td >{{dtp.date}}</td>
+                                <td>{{dtp.montantp}}</td>
+                                <td>{{dtp.modepay}}</td>
+                                <td>Payer  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
+                                  </svg></td>
+                            </tr>
+            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-4">
+                            <label for="montantr" id="montantr">Montant payer:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" required [(ngModel)]="mont" disabled>
+                        </div>
+                    </div> 
+                      <br> <br>
+                      <!--non payer-->
+                      <div class="row">
+                          <table class="table table-bordered">
+                              <thead>
+                              <tr>
+                                  
+                                  <th scope="col">Date echéance</th>
+                                  <th scope="col">Montant</th>
+                                  <th scope="col">Mode Payement</th>
+                                  <th scope="col">Etat</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr  *ngFor="let dt of (detailsprets | async)">
+                                  
+                                  <td >{{dt.date}}</td>
+                                  <td>{{dt.montantp}}</td>
+                                  <td>{{dt.modepay}}</td>
+                                  <td><button Text ="payer" class="btn btn-secondary" (click)="updatedetailspret(dt._id)">Payer </button></td>
+                              </tr>
+              
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-4">
+                        <label for="montantr" id="montantr">Reste a payer:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" required [(ngModel)]="montantr" disabled>
+                    </div>
+                </div>   
+              </div>
+          </div>
+<!--          
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-info" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+                </svg> imprimer</button>
+            </div>
+            <div class="col-4"></div>
+          </div>
+-->          
+      </div>    
+    </div>
